@@ -83,10 +83,8 @@ html, body {
 
 #topbar a:hover { 
     transform: scale(1.10);
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
     -webkit-text-fill-color: transparent;
     animation: topbarPulse 1s ease-in-out infinite;
-    transform-origin: center;
 }
 
 #topbar, .left-area, #socials {
