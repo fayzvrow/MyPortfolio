@@ -1,0 +1,163 @@
+:root {
+    --topbar-gap: 140px;
+}
+
+html, body {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    background: linear-gradient(90deg, #888888, #505050);
+    color: #0b0b0b;
+}
+
+#topbar {
+    position: fixed;
+    background: linear-gradient(90deg, #888888, #505050);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    height: 56px;
+    transform: translateY(-70px);
+    opacity: 0;
+    animation: topAppear 1s ease-out forwards;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+@keyframes topAppear {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#topbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 0;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    animation: lineGrow 1s ease-out 1.2s forwards;
+}
+
+@keyframes lineGrow { to { width: 100%; } }
+
+#topbar .top-left,
+#topbar .top-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#topbar a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.75);
+    transition: transform .18s ease, color .18s ease;
+}
+
+#topbar a:hover {
+    transform: scale(1.10);
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-text-fill-color: transparent;
+    animation: topbarPulse 1s ease-in-out infinite;
+}
+
+@keyframes topbarPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+}
+
+.main {
+    margin-top: var(--topbar-gap);
+    width: 90%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 60px;
+    padding-bottom: 100px;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-pic,
+.gsu-logo {
+    width: 160px;
+    height: 160px;    
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+    margin-top: 50px;
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateY(-40px);
+    animation: fadeFromTop 2s ease-out forwards;
+}
+
+@keyframes fadeFromTop {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-70px);
+    animation: slideLeft 2s ease forwards;
+}
+
+@keyframes slideLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(70px);
+    animation: slideRight 2s ease forwards;
+}
+
+@keyframes slideRight {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.45s; }
+.delay-3 { animation-delay: 0.7s; }
+.delay-4 { animation-delay: 0.95s; }
+.delay-5 { animation-delay: 1.2s; }
+.delay-6 { animation-delay: 1.45s; }
+
+.section-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-indent: 25px;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic, .gsu-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

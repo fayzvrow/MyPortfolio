@@ -1,0 +1,253 @@
+:root {
+    --topbar-gap: 140px;
+    --card-bg: #aaaaaa;
+}
+
+html, body {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    background: linear-gradient(90deg, #888888, #505050);
+    color: #0b0b0b;
+}
+
+#topbar {
+    position: fixed;
+    background: linear-gradient(90deg, #888888, #505050);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    height: 56px;
+    transform: translateY(-70px);
+    opacity: 0;
+    animation: topAppear 1s ease-out forwards;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+@keyframes topAppear {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+#topbar::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 0;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    animation: lineGrow 1s ease-out 1.2s forwards;
+}
+
+@keyframes lineGrow {
+    to { width: 100%; }
+}
+
+#topbar .top-left,
+#topbar .top-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#topbar a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.75);
+    transform: transform .18s ease, color .18s ease;
+}
+
+#topbar a:hover {
+    transform: scale(1.10);
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-text-fill-color: transparent;
+    animation: topbarPulse 1s ease-in-out infinite;
+}
+
+@keyframes topbarPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+}
+
+.main {
+    margin-top: var(--topbar-gap);
+    width: 90%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+}
+
+.page-title {
+    font-size: 40px;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-70px);
+    animation: slideLeft 2s ease forwards;
+}
+
+@keyframes slideLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.45s; }
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.project-item {
+    display: flex;
+    gap: 20px;
+    background: var(--card-bg);
+    min-height: 275px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.project-item:hover {
+    background-color: #a1a1a1;
+}
+
+@keyframes fadeFromLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeFromRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.project-item:nth-child(odd) {
+    animation-name: fadeFromLeft;
+    animation-delay: 0.3s;
+}
+
+.project-item:nth-child(even) {
+    animation-name: fadeFromRight;
+    animation-delay: 0.3s;
+}
+
+.project-img {
+    width: 310px;
+    height: 220px;
+    object-fit: cover;
+    background: #eee;
+    border-radius: 10px;
+    flex-shrink: 0;
+    display: block;
+    margin: auto;
+}
+
+.text h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.meta {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.i {
+    font-style: italic;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.play-button,
+.git-button {
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: #f2f2f2;
+    transition: 0.2s ease;
+    animation: buttonPulse 2.5s ease-in-out infinite;
+}
+
+.play-button {
+    background: #be3838;
+}
+
+.play-button:hover {
+    background: #b72727;
+}
+
+.git-button {
+    background: #286e3f;
+}
+
+.git-button:hover {
+    background: #214a2e;
+}
+
+@keyframes buttonPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.details {
+    list-style-type: disc;
+    padding-left: 18px;
+    margin-bottom: 14px;
+}
+
+.details li {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.coming-soon {
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border: 2px dashed #99c4f0;
+}
+
+.coming-soon .text {
+    margin-top: 70px;
+}
+
+@media (max-width: 880px) {
+    .projects-list { grid-template-columns: 1fr; }
+
+    .project-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .buttons { justify-content: center; }
+}

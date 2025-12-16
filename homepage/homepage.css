@@ -1,0 +1,265 @@
+:root {
+    --topbar-gap: 140px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    color: #0b0b0b;
+    background: linear-gradient(90deg, #888888, #505050);
+    -webkit-font-smoothing: antialiased;
+    overflow-y: auto;
+}
+
+#topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    height: 56px;
+    transform: translateY(-70px);
+    opacity: 0;
+    animation: topAppear 1s ease-out forwards;
+    z-index: 999;
+    box-sizing: border-box;
+    border-bottom: 2px soild rgba(255, 255, 255, 0.25);
+}
+
+@keyframes topAppear { to { transform: translateY(0); opacity: 1; } }
+
+@keyframes topbarPulse {
+    0%, 100% {transform: scale(1); }
+    50% { transform: scale(1.07); }
+}
+
+
+#topbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 0;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    animation: lineGrow 1s ease-out 3.2s forwards;
+}
+
+@keyframes lineGrow { to { width: 100%; } }
+
+#topbar .top-left {
+    display: flex;
+    align-items: center;
+}
+
+#topbar .top-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-right: 12px;
+}
+
+#topbar .home-link {
+    font-size: 20px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    transition: transform .18s ease, color .18s ease;
+}
+
+#topbar .top-right a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.75);
+    transition: transform .18s ease, color .18s ease;
+}
+
+#topbar a:hover { 
+    transform: scale(1.10);
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-text-fill-color: transparent;
+    animation: topbarPulse 1s ease-in-out infinite;
+    transform-origin: center;
+}
+
+#topbar, .left-area, #socials {
+    opacity: 0;
+    animation: fadeInUpDelayed 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUpDelayed {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#topbar { animation-delay: 1.9s; }
+.left-area { animation-delay: 2.1s; }
+#socials { animation-delay: 2.3s; }
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--topbar-gap)) 24px 40px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 200px);
+}
+
+.left-area {
+    flex: 1 1 600px; 
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: headIn 2.1s ease-out 2.1s forwards;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeLeft 700ms ease-out forwards;
+}
+
+.delay-a { animation-delay: 200ms; }
+.delay-b { animation-delay: 400ms; }
+.delay-c { animation-delay: 600ms; }
+.delay-d { animation-delay: 800ms; }
+
+@keyframes fadeLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.left-area h3 { font-size: 20px; margin: 0; opacity: .95; }
+.left-area h1 { font-size: clamp(28px, 5vw, 42px); margin: 6px 0; line-height: 1.02; }
+.left-area h4 { margin: 6px 0 18px; font-weight: 500; color: #1a2b4a; }
+
+.resume {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    box-shadow: 0 8px 24px rgba(0,114,255,0.18);
+    transition: transform .18s ease;
+    width: max-content;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: resumeFade 1s ease-out forwards, pulse 1s ease-in-out infinite;
+}
+
+@keyframes resumeFade {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.right-area { 
+    flex: 0 0 500px; 
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.code-box {
+    width: 650px;
+    max-width: 100%;
+    border-radius: 18px;
+    background: #1e1e1e;
+    box-shadow: 0 16px 40px rgba(10,20,40,0.12);
+    overflow: hidden;
+    color: #d4d4d4;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: headIn 900ms ease-out 200ms forwards;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-right: -100px;
+}
+
+@keyframes headIn { to { transform: translateY(0); opacity: 1; } }
+
+.code-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #2a2a2a;
+}
+
+.code-top span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.code-top .red { background: #ff5f56; }
+.code-top .yellow { background: #ffbd2e; }
+.code-top .green { background: #27e93f; }
+
+.code-content {
+    padding: 16px;
+    font-size: 11px;
+    white-space: pre-wrap;
+    overflow: visible;
+}
+
+#cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+#socials {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: fixed;
+    width: 100%;
+    bottom: 28px;
+    z-index: 50;
+}
+
+.logo { width: 52px; height: 52px; transition: transform .18s; }
+.logo:hover { transform: scale(1.14); }
+
+.logo, #topbar a, .resume {
+    transform-origin: center;
+}
+
+@media (max-width: 880px) {
+    .main { flex-direction: column-reverse;  margin-top: 90px; gap: 18px; }
+    .left-area { width: 100%; display: flex; justify-content: center; }
+    .right-area { text-align: center; }
+    #topbar { gap: 12px; padding: 12px 8px; }
+    #socials { gap: 28px; bottom: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none in !important; }
+}
