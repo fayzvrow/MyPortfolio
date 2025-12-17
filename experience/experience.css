@@ -63,15 +63,9 @@ html, body {
     transform: transform .18s ease, color .18s ease;
 }
 
-#topbar a:hover {
+#topbar a:hover { 
     transform: scale(1.10);
-    -webkit-text-fill-color: transparent;
-    animation: topbarPulse 1s ease-in-out infinite;
-}
-
-@keyframes topbarPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.07); }
+    color: linear-gradient(90deg, #00c6ff, #0072ff);
 }
 
 .main {

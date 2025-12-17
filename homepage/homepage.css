@@ -33,12 +33,6 @@ html, body {
 
 @keyframes topAppear { to { transform: translateY(0); opacity: 1; } }
 
-@keyframes topbarPulse {
-    0%, 100% {transform: scale(1); }
-    50% { transform: scale(1.07); }
-}
-
-
 #topbar::after {
     content: "";
     position: absolute;
@@ -83,8 +77,7 @@ html, body {
 
 #topbar a:hover { 
     transform: scale(1.10);
-    -webkit-text-fill-color: transparent;
-    animation: topbarPulse 1s ease-in-out infinite;
+    color: linear-gradient(90deg, #00c6ff, #0072ff);
 }
 
 #topbar, .left-area, #socials {
