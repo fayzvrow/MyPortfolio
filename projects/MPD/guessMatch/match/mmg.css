@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: #9c9c9c;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main {
+    margin-top: 70px;
+    background: white;
+    padding: 25px 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.game-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.setup {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 35px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    height: 30vh;
+}
+
+.setup label {
+    font-weight: bold;
+}
+
+.setup select {
+    margin-left: 10px;
+    padding: 18px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    min-width: 170px;
+    height: 45px;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+#startButton {
+    margin-top: 25px;
+    background: #2d6cdf;
+}
+
+#ngButton {
+    background: #a97b2b;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.board-area {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.card {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4a73ff;
+    color: white;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.hidden {
+    background: #4a73ff;
+}
+
+.matched {
+    background: #3dbf4d;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #3dbf4d;
+    font-size: 24px;
+    text-align: center;
+}
+
+.scoreboard {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#score {
+    font-weight: bold;
+    font-size: 20px;
+    color: #2d6cdf;
+}
+
+#leaderboard {
+    list-style: decimal inside;
+    padding-left: 0;
+}

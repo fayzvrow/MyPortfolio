@@ -5,102 +5,270 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJECTS</title>
     <link rel="stylesheet" href="projects.css">
-    <link rel="icon" type="images/png" href="../images/green-circle.png">
+    <link rel="icon" type="images/png" href="../images/main/green.png">
 </head>
 <body>
+    <div id="topbar">
+        <nav class="top-left">
+            <a href="../homepage/homepage.html">HOME</a>
+        </nav>
 
-<div id="topbar">
-    <nav class="top-left">
-        <a href="../homepage/homepage.html">HOME</a>
-    </nav>
-
-    <nav class="top-right">
-        <a href="../about/about.html">ABOUT</a>
-        <a href="../experience/experience.html">EXPERIENCE</a>
-        <a href="projects.html">PROJECTS</a>
-    </nav>
-</div>
-
-<div class="main">
-    <h1 class="page-title slide-left delay-1">PROJECTS</h1>
-    <p class="page-subtitle slide-left delay-2">A showcase of my ideas brought to life</p>
-
-    <div class="projects-list">
-        <div class="project-item">
-            <img src="../images/portfolio-ss.png" class="project-img" alt="Project Screenshot">
-
-            <div class="text">
-                <h2>Personal Website</h2>
-                <p class="meta">
-                    <span class="i">October 2025</span> | HTML, CSS, JavaScript
-                </p>
-
-                <ul class="details">
-                    <li>Created a personal website showcasing my About, Education, and Experience while highlighting my skills, work, and professional journey.</li>
-                    <li>Designed and developed a responsive, multi-page portfolio with smooth animations and engaging, interactive UI elements.</li>
-                    <li>Emphasized clean structure, accessibility, and consistent visual design throughout the site.</li>
-
-                </ul>
-
-                <div class="buttons">
-                    <a href="https://fayzvrow.github.io/MyPortfolio/homepage/homepage.html" target="_blank" class="play-button">View Live</a>
-                    <a href="https://github.com/fayzvrow/MyPortfolio" target="_blank" class="git-button">Show GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="../images/chess.png" class="project-img" alt="Project Screenshot">
-
-            <div class="text">
-                <h2>Game of Chess</h2>
-                <p class="meta">
-                    <span class="i">August 2025</span> | HTML, CSS, JavaScript
-                </p>
-
-                <ul class="details">
-                    <li>Implemented a chess engine with full move validation, including castling, en passant, and pawn promotion.</li>
-                    <li>Added real-time check and checkmate detection with turn-based state management for smooth gameplay.</li>
-                    <li>Built a responsive, accessible interface using CSS Grid and Flexbox for seamless play across devices.</li>
-                </ul>
-
-                <div class="buttons">
-                    <a href="../projects/MPD/chess/index.html" target="_blank" class="play-button">View Live</a>
-                    <a href="https://github.com/fayzvrow/MyPortfolio/tree/main/projects/MPD/chess" target="_blank" class="git-button">Show GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-item">
-            <img src="../images/website.png" class="project-img" alt="Project Screenshot">
-
-            <div class="text">
-                <h2>Christmas Fifteen Puzzle</h2>
-                <p class="meta">
-                    <span class="i">December 2025</span> | HTML, CSS, JS, PHP
-                </p>
-
-                <ul class="details">
-                    <li>Built a holiday-themed sliding puzzle game with story elements.</li>
-                    <li>Used JavaScript for game logic and smooth transitions.</li>
-                    <li>Tested locally with MAMP and versioned using GitHub.</li>
-                </ul>
-
-                <div class="buttons">
-                    <a href="" target="_blank" class="play-button">View Live</a>
-                    <a href="" target="_blank" class="git-button">Show GitHub</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-item coming-soon">
-            <div class="text">
-                <h2>More projects on the way.</h2>
-                <p class="i">Always learning, always growing.</p>
-            </div>
-        </div>
-
+        <nav class="top-right">
+            <a href="../about/about.html">ABOUT</a>
+            <a href="../experience/experience.html">EXPERIENCE</a>
+            <a href="projects.html">PROJECTS</a>
+        </nav>
     </div>
-</div>
+
+    <div class="main">
+        <h1 class="page-title slide-left delay-1">PROJECTS</h1>
+        <p class="page-subtitle slide-left delay-2">A showcase of my ideas brought to life</p>
+
+        <div class="projects-list">
+            
+            <div class="project-item">
+                <img src="../projects/MPD/screenshots/.." class="project-img" alt="Project Screenshot">
+
+                <div class="text">
+                    <h2>Christmas Fifteen Puzzle</h2>
+                    <p class="meta">
+                        <span class="i">December 2025</span> | HTML, CSS, JS, PHP
+                    </p>
+
+                    <ul class="details"> crafted
+                        <li>Built a holiday-themed sliding puzzle game with story elements.</li>
+                        <li>Used JavaScript for game logic and smooth transitions.</li>
+                        <li>Tested locally with MAMP and versioned using GitHub.</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="" target="_blank" class="play-button">View Live</a>
+                        <a href="" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-img-wrapper">
+                    <img src="../projects/MPD/screenshots/jeopardy.png" class="project-img one" alt="Jeopardy">                
+                    <img src="../projects/MPD/screenshots/jeopardy-board.png" class="project-img two" alt="Jeopardy Board">
+                </div>
+
+                <div class="text">
+                    <h2>Jeopardy! Battle Arena</h2>
+                    <p class="meta">
+                        <span class="i">November 2025</span> | HTML, CSS, PHP
+                    </p>
+
+                    <ul class="details">
+                        <li>Organized a two-player trivia game with categories, tiered question values, and a dynamic scoreboard.</li>
+                        <li>Tracked player statistics, streaks, and bonuses while handling correct/wrong answers, including Daily Doubles.</li>
+                        <li>Delivered smooth navigation between board, question, and results screens, maintaining presistent game stats via PHP sessions.</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="../projects/MPD/jeopardy/" target="_blank" class="play-button">View Live</a>
+                        <a href="https://github.com/fayzvrow/MyPortfolio/tree/main/projects/MPD/jeopardy" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-img-wrapper">
+                    <img src="../projects/MPD/screenshots/guess.png" class="project-img one" alt="Guess Game">                
+                    <img src="../projects/MPD/screenshots/match.png" class="project-img two" alt="Match Game">
+                </div>
+
+                <div class="text">
+                    <h2>Think Fast: Guess or Match</h2>
+                    <p class="meta">
+                        <span class="i">November 2025</span> | HTML, CSS, JavaScript
+                    </p>
+
+                    <ul class="details">
+                        <li>Combined a memory matching game and a number guessing challenge to test recall, logic, and reaction time.</li>
+                        <li>Included selectable difficulty, pair counts, timers, scoring, sound feedback, and limited attempts for balanced gameplay.</li>
+                        <li>Connected multiple game modes through a shared interface, maintaining clear state updates and smooth transitions between screens.</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="../projects/MPD/guessMatch/guess/numguess.html" target="_blank" class="play-button">View Live</a>
+                        <a href="https://github.com/fayzvrow/MyPortfolio/tree/main/projects/MPD/guessMatch" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-img-wrapper">
+                    <img src="../projects/MPD/screenshots/heart.png" class="project-img one" alt="Heart">
+                    <img src="../projects/MPD/screenshots/heart-move.png" class="project-img two" alt="Heart Move">
+                </div>
+
+                <div class="text">
+                    <h2>Heart Animation</h2>
+                    <p class="meta">
+                        <span class="i">November 2025</span> | HTML, CSS, JavaScript
+                    </p>
+
+                    <ul class="details">
+                        <li>Triggered animated heart effects with best, blink, and shadow on mouse clicks for interactive visual feedback.</li>
+                        <li>Controlled smooth movement of the heart image to the clicked position, creating a dynamic and engaging user experience.</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="../projects/MPD/heart/heart.html" target="_blank" class="play-button">View Live</a>
+                        <a href="https://github.com/fayzvrow/MyPortfolio/tree/main/projects/MPD/heart" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="../projects/MPD/screenshots/portfolio.png" class="project-img one" alt="Portfolio">
+
+                <div class="text">
+                    <h2>Personal Website</h2>
+                    <p class="meta">
+                        <span class="i">October 2025</span> | HTML, CSS, JavaScript
+                    </p>
+
+                    <ul class="details">
+                        <li>Created a personal website showcasing my About, Education, and Experience while highlighting my skills, work, and professional journey.</li>
+                        <li>Designed and developed a responsive, multi-page portfolio with smooth animations and engaging, interactive UI elements.</li>
+                        <li>Emphasized clean structure, accessibility, and consistent visual design throughout the site.</li>
+
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="https://fayzvrow.github.io/MyPortfolio/homepage/homepage.html" target="_blank" class="play-button">View Live</a>
+                        <a href="https://github.com/fayzvrow/MyPortfolio" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-img-wrapper">
+                    <img src="../projects/MPD/screenshots/chess.png" class="project-img one" alt="Game of Chess">
+                    <img src="../projects/MPD/screenshots/chess-win.png" class="project-img two" alt="Chess Win">
+                </div>
+
+                <div class="text">
+                    <h2>Game of Chess</h2>
+                    <p class="meta">
+                        <span class="i">August 2025</span> | HTML, CSS, JavaScript
+                    </p>
+
+                    <ul class="details">
+                        <li>Implemented a chess engine with full move validation, including castling, en passant, and pawn promotion.</li>
+                        <li>Added real-time check and checkmate detection with turn-based state management for smooth gameplay.</li>
+                        <li>Built a responsive, accessible interface using CSS Grid and Flexbox for seamless play across devices.</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="../projects/MPD/chess/index.html" target="_blank" class="play-button">View Live</a>
+                        <a href="https://github.com/fayzvrow/MyPortfolio/tree/main/projects/MPD/chess" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-img-wrapper">
+                    <img src="../projects/MPD/screenshots/c4.png" class="project-img one" alt="Connect 4">
+                    <img src="../projects/MPD/screenshots/c4-win.png" class="project-img two" alt="Connect 4 Win">
+                </div>
+
+                <div class="text">
+                    <h2>Connect 4</h2>
+                    <p class="meta">
+                        <span class="i">February 2025</span> | HTML, CSS, JavaScript
+                    </p>
+
+                    <ul class="details">
+                        <li>Developed a dynamic Connect Four gameplay system with robust logic to support seamless user interaction.</li>
+                        <li>Managed turn flow, win detection, and tie conditions to ensure, rule-accurate gameplay.</li>
+                        <li>Provided responsive updates and clear visual feedback for an engaging, intuitive player experience.</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="../projects/MPD/connect4/index.html" target="_blank" class="play-button">View Live</a>
+                        <a href="https://github.com/fayzvrow/MyPortfolio/tree/main/projects/MPD/connect4" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="../projects/MPD/screenshots/atm.png" class="project-img" alt="Bank Account">
+
+                <div class="text">
+                    <h2>Bank Account System</h2>
+                    <p class="meta">
+                        <span class="i">January 2025</span> | C
+                    </p>
+
+                    <ul class="details">
+                        <li>Handled a comman-line bank account system supporting deposits, withdrawals, balance checks, PIN changes, and account deletion</li>
+                        <li>Applied error handling, input validation, and data management techniques to ensure reliable and secure operations.</li>
+                        <li>Directed interactive user prompts for account actions, delivering real-time feedback and smooth workflow throughout the system.</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="https://github.com/fayzvrow/MyPortfolio/tree/main/projects/MPD/" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-img-wrapper">
+                    <img src="../projects/MPD/screenshots/ttt.png" class="project-img one" alt="Tic Tac Toe">
+                    <img src="../projects/MPD/screenshots/ttt-win.png" class="project-img two" alt="Tic Tac Toe Win">
+                </div>
+
+                <div class="text">
+                    <h2>Tic Tac Toe</h2>
+                    <p class="meta">
+                        <span class="i">December 2024</span> | HTML, CSS, JavaScript
+                    </p>
+
+                    <ul class="details">
+                        <li>Engineered a simple yet engaging gameplay experience with responsive layout and dynamic turn-based logic.</li>
+                        <li>Integrated real-time win detection and smooth visual feedback for an intuitive, player-friendly experience.</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="../projects/MPD/ttt/index.html" target="_blank" class="play-button">View Live</a>
+                        <a href="https://github.com/fayzvrow/MyPortfolio/tree/main/projects/MPD/ttt" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="../projects/MPD/screenshots/e-commerce.png" class="project-img" alt="E-Commerce">
+
+                <div class="text">
+                    <h2>E-Commerce System</h2>
+                    <p class="meta">
+                        <span class="i">October 2024</span> | Python (OOP)
+                    </p>
+
+                    <ul class="details">
+                        <li>Structured a store simulation with project catalog, stock tracking, and user-specific shopping carts.</li>
+                        <li>Enabled dynamic cart operations including item selection, total calculation, and checkout flow.</li>
+                        <li>Supported interactive console inputs for real time product selection and quantity updates.</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <a href="https://github.com/fayzvrow/MyPortfolio/tree/main/projects/MPD/e-commerce" target="_blank" class="git-button">Show GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item coming-soon">
+                <div class="text">
+                    <h2>More projects on the way.</h2>
+                    <p class="i">Always learning, always growing.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>

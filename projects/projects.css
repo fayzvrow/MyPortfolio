@@ -157,6 +157,44 @@ html, body {
     border-radius: 12px;
 }
 
+.project-img-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.project-img-wrapper img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.project-img-wrapper img.one {
+    animation: crossfadeOne 7s infinite ease-in-out;
+}
+
+.project-img-wrapper img.two {
+    animation: crossfadeTwo 7s infinite ease-in-out;
+}
+
+@keyframes crossfadeOne {
+    0%, 40% { opacity: 1; }
+    50%, 90% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes crossfadeTwo {
+    0%, 40% { opacity: 0; }
+    50%, 90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 .text {
     width: 100%;
     max-width: 420px;
@@ -242,7 +280,7 @@ html, body {
 }
 
 .coming-soon .text {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 @media (max-width: 880px) {
