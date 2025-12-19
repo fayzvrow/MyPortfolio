@@ -51,7 +51,7 @@ function startGame() {
         let div = document.createElement("div");
         div.classList.add("card");
         div.dataset.image = img;
-        div.innerHTML = `<img src="images/${img}">`;
+        div.innerHTML = `<img src="../images/${img}">`;
         div.addEventListener("click", () => flipCard(div));
         board.appendChild(div);
     });
