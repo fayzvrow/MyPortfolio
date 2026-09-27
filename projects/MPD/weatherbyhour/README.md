@@ -2,6 +2,8 @@ WEATHER BY HOUR
 
 Weather by Hour is a weather dashboard that lets users search for a city and view its current weather, forecast information, and local time in one place.
 
+![Weather by Hour Preview](weatherbyhour-preview.png)
+
 I built this project to practice working with APIs, handling user input, and creating a more interactive web interface with JavaScript. I also wanted to focus on the smaller details that make a site feel smooth, such as search suggestions, validation, loading states, and animations.
 
 FEATURES - 
