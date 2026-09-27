@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather by Hour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="weather-app">
+        <h1>Weather by Hour</h1>
+
+        <div class="search-wrap">
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Enter a city..."
+                >
+                <button id="search-button">Search</button>
+            </div>
+            <div id="city-dropdown"></div>
+        </div>
+
+        <div class="dashboard">
+            <section id="weather-box" class="weather-box">
+                <h2>Weather Happens</h2>
+                <h3 id="city-name">Loading city...</h3>
+                <div class="temperature">
+                    <span id="temperature">--</span>°F
+                </div>
+
+                <p id="weather-info">Loading weather...</p>
+                <div class="weather-details">
+                    <div class="weather-card">
+                        <h3>Feels Like</h3>
+                        <p id="feels-like">--°F</p>
+                    </div>
+
+                    <div class="weather-card">
+                        <h3>Humidity</h3>
+                        <p id="humidity">--%</p>
+                    </div>
+
+                    <div class="weather-card">
+                        <h3>Wind</h3>
+                        <p id="wind-speed">-- mph</p>
+                    </div>
+
+                    <div class="weather-card">
+                        <h3>High / Low</h3>
+                        <p id="high-low">--° / --°</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="time-box">
+                <h2>Time Flies</h2>
+                <div id="current-time">--:--:-- --</div>
+                <div id="current-date">--</div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
